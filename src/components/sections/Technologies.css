@@ -1,0 +1,144 @@
+@import './shared.css';
+
+.technologies {
+  padding: 5rem 0;
+  background: #ffffff;
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.technologies-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0 4rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.technologies-grid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.technologies-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Carousel Navigation */
+.scroll-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border: 2px solid #007acc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 122, 204, 0.2);
+  font-size: 1.2rem;
+}
+
+.scroll-indicator:hover {
+  background: #007acc;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 122, 204, 0.3);
+}
+
+.scroll-left {
+  left: 0.5rem;
+}
+
+.scroll-right {
+  right: 0.5rem;
+}
+
+.scroll-indicator i {
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+.scroll-indicator:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.scroll-indicator:disabled:hover {
+  background: #f8f9fa;
+  color: #6c757d;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Technology card adjustments for carousel */
+.technology-card {
+  flex-shrink: 0;
+  min-width: 120px;
+  max-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .technologies {
+    padding: 3rem 0;
+  }
+  
+  .technologies-container {
+    padding: 0 3rem;
+  }
+  
+  .scroll-indicator {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .scroll-left {
+    left: 0.25rem;
+  }
+  
+  .scroll-right {
+    right: 0.25rem;
+  }
+  
+  .technology-card {
+    min-width: 100px;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .technologies-container {
+    padding: 0 2.5rem;
+  }
+  
+  .scroll-indicator {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .technology-card {
+    min-width: 80px;
+    max-width: 80px;
+  }
+} 
