@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-/* Comic grid background pattern - 5 rows covering full height */
+/* First layer - All rows sliding right */
 .hero::before {
   content: '';
   position: absolute;
@@ -59,16 +59,16 @@
     url('/src/assets/images/background/IMG_0310.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG');
   background-position: 
-    /* Row 1 - Reduced spacing from 280px to 240px */
-    0px 8vh, 240px 8vh, 480px 8vh, 720px 8vh, 960px 8vh, 1200px 8vh,
-    /* Row 2 - 20vh (12vh spacing) */
-    0px 20vh, 240px 20vh, 480px 20vh, 720px 20vh, 960px 20vh, 1200px 20vh,
-    /* Row 3 - 32vh (12vh spacing) */
-    0px 32vh, 240px 32vh, 480px 32vh, 720px 32vh, 960px 32vh, 1200px 32vh,
-    /* Row 4 - 44vh (12vh spacing) */
-    0px 44vh, 240px 44vh, 480px 44vh, 720px 44vh, 960px 44vh, 1200px 44vh,
-    /* Row 5 - 56vh (12vh spacing) */
-    0px 56vh, 240px 56vh, 480px 56vh, 720px 56vh, 960px 56vh, 1200px 56vh;
+    /* Row 1 - Fixed horizontal spacing for 18vh images */
+    0px 5vh, 320px 5vh, 640px 5vh, 960px 5vh, 1280px 5vh, 1600px 5vh,
+    /* Row 2 - Adequate vertical spacing (18vh + 2vh gap = 20vh total) */
+    0px 25vh, 320px 25vh, 640px 25vh, 960px 25vh, 1280px 25vh, 1600px 25vh,
+    /* Row 3 - 20vh spacing between rows */
+    0px 45vh, 320px 45vh, 640px 45vh, 960px 45vh, 1280px 45vh, 1600px 45vh,
+    /* Row 4 - 20vh spacing between rows */
+    0px 65vh, 320px 65vh, 640px 65vh, 960px 65vh, 1280px 65vh, 1600px 65vh,
+    /* Row 5 - 20vh spacing between rows */
+    0px 85vh, 320px 85vh, 640px 85vh, 960px 85vh, 1280px 85vh, 1600px 85vh;
   background-size: 
     /* Maintain aspect ratio - assume 4:3 photos, scale by height */
     auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
@@ -80,10 +80,10 @@
   opacity: 0.3;
   filter: grayscale(30%) contrast(1.1);
   z-index: 1;
-  animation: slideRightContinuous 25s linear infinite;
+  animation: slideRightInfinite 20s linear infinite;
 }
 
-/* Second layer for seamless loop */
+/* Second layer - Seamless loop continuation */
 .hero::after {
   content: '';
   position: absolute;
@@ -92,7 +92,7 @@
   width: 200%;
   height: 100%;
   background-image: 
-    /* Row 1 */
+    /* Row 1 - Same as first layer */
     url('/src/assets/images/background/IMG_0976.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
@@ -128,16 +128,16 @@
     url('/src/assets/images/background/IMG_0310.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG');
   background-position: 
-    /* Row 1 - Offset for seamless loop, updated spacing */
-    1920px 8vh, 2240px 8vh, 2560px 8vh, 2880px 8vh, 3200px 8vh, 3520px 8vh,
+    /* Row 1 - Offset to create seamless loop */
+    1920px 5vh, 2240px 5vh, 2560px 5vh, 2880px 5vh, 3200px 5vh, 3520px 5vh,
     /* Row 2 */
-    1920px 20vh, 2240px 20vh, 2560px 20vh, 2880px 20vh, 3200px 20vh, 3520px 20vh,
+    1920px 25vh, 2240px 25vh, 2560px 25vh, 2880px 25vh, 3200px 25vh, 3520px 25vh,
     /* Row 3 */
-    1920px 32vh, 2240px 32vh, 2560px 32vh, 2880px 32vh, 3200px 32vh, 3520vh 32vh,
+    1920px 45vh, 2240px 45vh, 2560px 45vh, 2880px 45vh, 3200px 45vh, 3520px 45vh,
     /* Row 4 */
-    1920px 44vh, 2240px 44vh, 2560px 44vh, 2880px 44vh, 3200px 44vh, 3520px 44vh,
+    1920px 65vh, 2240px 65vh, 2560px 65vh, 2880px 65vh, 3200px 65vh, 3520px 65vh,
     /* Row 5 */
-    1920px 56vh, 2240px 56vh, 2560px 56vh, 2880px 56vh, 3200px 56vh, 3520px 56vh;
+    1920px 85vh, 2240px 85vh, 2560px 85vh, 2880px 85vh, 3200px 85vh, 3520px 85vh;
   background-size: 
     /* Maintain aspect ratio - assume 4:3 photos, scale by height */
     auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
@@ -148,17 +148,17 @@
   background-repeat: no-repeat;
   opacity: 0.3;
   filter: grayscale(30%) contrast(1.1);
-  z-index: 1;
-  animation: slideRightContinuous 25s linear infinite;
+  z-index: 2;
+  animation: slideRightInfinite 20s linear infinite;
 }
 
-/* Improved carousel animation */
-@keyframes slideRightContinuous {
+/* Infinite sliding animation */
+@keyframes slideRightInfinite {
   0% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-1680px);
+    transform: translateX(-1920px);
   }
 }
 
@@ -309,9 +309,9 @@
     height: 200px;
   }
   
-  /* Adjust carousel for mobile - 5 rows with smaller images */
+  /* Adjust carousel for mobile */
   .hero::before,
   .hero::after {
-    background-size: 160px 100px;
+    background-size: auto 14vh;
   }
 }
