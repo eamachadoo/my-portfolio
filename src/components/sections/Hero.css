@@ -14,44 +14,50 @@
   overflow: hidden;
 }
 
-/* First layer - All rows sliding right */
+/* First layer - Rows sliding right (1, 3, 5) */
 .hero::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 400%; /* Increased width for seamless infinite loop */
   height: 100%;
   background-image: 
-    /* Row 1 */
+    /* Row 1 - slides right */
     url('/src/assets/images/background/IMG_0976.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
     url('/src/assets/images/background/IMG_0243.JPG'),
     url('/src/assets/images/background/IMG_0310.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG'),
-    /* Row 2 */
-    url('/src/assets/images/background/IMG_0392.JPG'),
-    url('/src/assets/images/background/IMG_0423.JPG'),
     url('/src/assets/images/background/IMG_0976.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
     url('/src/assets/images/background/IMG_0243.JPG'),
-    /* Row 3 */
+    url('/src/assets/images/background/IMG_0310.JPG'),
+    url('/src/assets/images/background/IMG_0358.JPG'),
+    /* Row 2 - empty for alternating effect */
+    /* Row 3 - slides right */
     url('/src/assets/images/background/IMG_0310.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG'),
     url('/src/assets/images/background/IMG_0392.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
     url('/src/assets/images/background/IMG_0976.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
-    /* Row 4 */
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
     url('/src/assets/images/background/IMG_0310.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG'),
     url('/src/assets/images/background/IMG_0392.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
-    /* Row 5 */
+    url('/src/assets/images/background/IMG_0976.JPG'),
+    url('/src/assets/images/background/IMG_1098.JPG'),
+    /* Row 4 - empty for alternating effect */
+    /* Row 5 - slides right */
+    url('/src/assets/images/background/IMG_0976.JPG'),
+    url('/src/assets/images/background/IMG_1098.JPG'),
+    url('/src/assets/images/background/IMG_0229.JPG'),
+    url('/src/assets/images/background/IMG_0243.JPG'),
+    url('/src/assets/images/background/IMG_0310.JPG'),
+    url('/src/assets/images/background/IMG_0358.JPG'),
     url('/src/assets/images/background/IMG_0976.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
@@ -59,106 +65,100 @@
     url('/src/assets/images/background/IMG_0310.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG');
   background-position: 
-    /* Row 1 - Fixed horizontal spacing for 18vh images */
-    0px 5vh, 320px 5vh, 640px 5vh, 960px 5vh, 1280px 5vh, 1600px 5vh,
-    /* Row 2 - Adequate vertical spacing (18vh + 2vh gap = 20vh total) */
-    0px 25vh, 320px 25vh, 640px 25vh, 960px 25vh, 1280px 25vh, 1600px 25vh,
-    /* Row 3 - 20vh spacing between rows */
-    0px 45vh, 320px 45vh, 640px 45vh, 960px 45vh, 1280px 45vh, 1600px 45vh,
-    /* Row 4 - 20vh spacing between rows */
-    0px 65vh, 320px 65vh, 640px 65vh, 960px 65vh, 1280px 65vh, 1600px 65vh,
-    /* Row 5 - 20vh spacing between rows */
-    0px 85vh, 320px 85vh, 640px 85vh, 960px 85vh, 1280px 85vh, 1600px 85vh;
+    /* Row 1 - slides right */
+    0px 2vh, 320px 2vh, 640px 2vh, 960px 2vh, 1280px 2vh, 1600px 2vh, 
+    1920px 2vh, 2240px 2vh, 2560px 2vh, 2880px 2vh, 3200px 2vh, 3520px 2vh,
+    /* Row 3 - slides right */
+    0px 34vh, 320px 34vh, 640px 34vh, 960px 34vh, 1280px 34vh, 1600px 34vh,
+    1920px 34vh, 2240px 34vh, 2560px 34vh, 2880px 34vh, 3200px 34vh, 3520px 34vh,
+    /* Row 5 - slides right */
+    0px 66vh, 320px 66vh, 640px 66vh, 960px 66vh, 1280px 66vh, 1600px 66vh,
+    1920px 66vh, 2240px 66vh, 2560px 66vh, 2880px 66vh, 3200px 66vh, 3520px 66vh;
   background-size: 
-    /* Maintain aspect ratio - assume 4:3 photos, scale by height */
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh;
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh;
   background-repeat: no-repeat;
   opacity: 0.3;
   filter: grayscale(30%) contrast(1.1);
   z-index: 1;
-  animation: slideRightInfinite 20s linear infinite;
+  animation: slideRightInfinite 30s linear infinite;
 }
 
-/* Second layer - Seamless loop continuation */
+/* Second layer - Rows sliding left (2, 4) */
 .hero::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 400%; /* Increased width for seamless infinite loop */
   height: 100%;
   background-image: 
-    /* Row 1 - Same as first layer */
-    url('/src/assets/images/background/IMG_0976.JPG'),
-    url('/src/assets/images/background/IMG_1098.JPG'),
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG'),
-    /* Row 2 */
+    /* Row 2 - slides left */
     url('/src/assets/images/background/IMG_0392.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
     url('/src/assets/images/background/IMG_0976.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
     url('/src/assets/images/background/IMG_0243.JPG'),
-    /* Row 3 */
-    url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG'),
     url('/src/assets/images/background/IMG_0392.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
     url('/src/assets/images/background/IMG_0976.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
-    /* Row 4 */
+    url('/src/assets/images/background/IMG_0229.JPG'),
+    url('/src/assets/images/background/IMG_0243.JPG'),
+    /* Row 4 - slides left */
     url('/src/assets/images/background/IMG_0229.JPG'),
     url('/src/assets/images/background/IMG_0243.JPG'),
     url('/src/assets/images/background/IMG_0310.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG'),
     url('/src/assets/images/background/IMG_0392.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
-    /* Row 5 */
-    url('/src/assets/images/background/IMG_0976.JPG'),
-    url('/src/assets/images/background/IMG_1098.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
     url('/src/assets/images/background/IMG_0243.JPG'),
     url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG');
+    url('/src/assets/images/background/IMG_0358.JPG'),
+    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0423.JPG');
   background-position: 
-    /* Row 1 - Offset to create seamless loop */
-    1920px 5vh, 2240px 5vh, 2560px 5vh, 2880px 5vh, 3200px 5vh, 3520px 5vh,
-    /* Row 2 */
-    1920px 25vh, 2240px 25vh, 2560px 25vh, 2880px 25vh, 3200px 25vh, 3520px 25vh,
-    /* Row 3 */
-    1920px 45vh, 2240px 45vh, 2560px 45vh, 2880px 45vh, 3200px 45vh, 3520px 45vh,
-    /* Row 4 */
-    1920px 65vh, 2240px 65vh, 2560px 65vh, 2880px 65vh, 3200px 65vh, 3520px 65vh,
-    /* Row 5 */
-    1920px 85vh, 2240px 85vh, 2560px 85vh, 2880px 85vh, 3200px 85vh, 3520px 85vh;
+    /* Row 2 - slides left (starts from right side) */
+    3520px 18vh, 3200px 18vh, 2880px 18vh, 2560px 18vh, 2240px 18vh, 1920px 18vh,
+    1600px 18vh, 1280px 18vh, 960px 18vh, 640px 18vh, 320px 18vh, 0px 18vh,
+    /* Row 4 - slides left (starts from right side) */
+    3520px 50vh, 3200px 50vh, 2880px 50vh, 2560px 50vh, 2240px 50vh, 1920px 50vh,
+    1600px 50vh, 1280px 50vh, 960px 50vh, 640px 50vh, 320px 50vh, 0px 50vh;
   background-size: 
-    /* Maintain aspect ratio - assume 4:3 photos, scale by height */
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh,
-    auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh, auto 18vh;
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
+    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh;
   background-repeat: no-repeat;
   opacity: 0.3;
   filter: grayscale(30%) contrast(1.1);
   z-index: 2;
-  animation: slideRightInfinite 20s linear infinite;
+  animation: slideLeftInfinite 30s linear infinite;
 }
 
-/* Infinite sliding animation */
+/* Animation for rows sliding right (1, 3, 5) */
 @keyframes slideRightInfinite {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1920px);
+    transform: translateX(-1920px); /* Move one full cycle */
+  }
+}
+
+/* Animation for rows sliding left (2, 4) */
+@keyframes slideLeftInfinite {
+  0% {
+    transform: translateX(-1920px); /* Start offset */
+  }
+  100% {
+    transform: translateX(0); /* Move to origin */
   }
 }
 
@@ -312,6 +312,6 @@
   /* Adjust carousel for mobile */
   .hero::before,
   .hero::after {
-    background-size: auto 14vh;
+    background-size: auto 12vh;
   }
 }
