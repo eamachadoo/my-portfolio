@@ -20,72 +20,114 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%; /* Increased width for seamless infinite loop */
+  width: 700%; /* Adjusted for 17 images */
   height: 100%;
   background-image: 
-    /* Row 1 - slides right */
-    url('/src/assets/images/background/IMG_0976.JPG'),
+    /* Row 1 - slides right (17 images randomized) */
+    url('/src/assets/images/background/IMG_0725.JPG'),
+    url('/src/assets/images/background/IMG_0384.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
+    url('/src/assets/images/background/IMG_0542.JPG'),
+    url('/src/assets/images/background/IMG_0776.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG'),
     url('/src/assets/images/background/IMG_0976.JPG'),
-    url('/src/assets/images/background/IMG_1098.JPG'),
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
+    url('/src/assets/images/background/IMG_0673.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG'),
-    /* Row 2 - empty for alternating effect */
-    /* Row 3 - slides right */
-    url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG'),
-    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0747.JPG'),
+    url('/src/assets/images/background/IMG_0591.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
-    url('/src/assets/images/background/IMG_0976.JPG'),
-    url('/src/assets/images/background/IMG_1098.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG'),
+    url('/src/assets/images/background/IMG_0758.JPG'),
+    url('/src/assets/images/background/IMG_0243.JPG'),
+    url('/src/assets/images/background/IMG_0536.JPG'),
     url('/src/assets/images/background/IMG_0392.JPG'),
-    url('/src/assets/images/background/IMG_0423.JPG'),
-    url('/src/assets/images/background/IMG_0976.JPG'),
+    url('/src/assets/images/background/IMG_0597.JPG'),
+    /* Repeat first few for seamless loop */
+    url('/src/assets/images/background/IMG_0725.JPG'),
+    url('/src/assets/images/background/IMG_0384.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
-    /* Row 4 - empty for alternating effect */
-    /* Row 5 - slides right */
+    url('/src/assets/images/background/IMG_0542.JPG'),
+    /* Row 3 - slides right (different randomized order of 17 images) */
+    url('/src/assets/images/background/IMG_0597.JPG'),
     url('/src/assets/images/background/IMG_0976.JPG'),
-    url('/src/assets/images/background/IMG_1098.JPG'),
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
+    url('/src/assets/images/background/IMG_0725.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG'),
-    url('/src/assets/images/background/IMG_0976.JPG'),
+    url('/src/assets/images/background/IMG_0747.JPG'),
     url('/src/assets/images/background/IMG_1098.JPG'),
+    url('/src/assets/images/background/IMG_0536.JPG'),
+    url('/src/assets/images/background/IMG_0423.JPG'),
+    url('/src/assets/images/background/IMG_0673.JPG'),
     url('/src/assets/images/background/IMG_0229.JPG'),
+    url('/src/assets/images/background/IMG_0776.JPG'),
+    url('/src/assets/images/background/IMG_0591.JPG'),
     url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG');
+    url('/src/assets/images/background/IMG_0384.JPG'),
+    url('/src/assets/images/background/IMG_0758.JPG'),
+    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0542.JPG'),
+    /* Repeat first few for seamless loop */
+    url('/src/assets/images/background/IMG_0597.JPG'),
+    url('/src/assets/images/background/IMG_0976.JPG'),
+    url('/src/assets/images/background/IMG_0725.JPG'),
+    url('/src/assets/images/background/IMG_0358.JPG'),
+    /* Row 5 - slides right (another randomized order of 17 images) */
+    url('/src/assets/images/background/IMG_0542.JPG'),
+    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0243.JPG'),
+    url('/src/assets/images/background/IMG_0725.JPG'),
+    url('/src/assets/images/background/IMG_0597.JPG'),
+    url('/src/assets/images/background/IMG_0229.JPG'),
+    url('/src/assets/images/background/IMG_0776.JPG'),
+    url('/src/assets/images/background/IMG_0758.JPG'),
+    url('/src/assets/images/background/IMG_0976.JPG'),
+    url('/src/assets/images/background/IMG_0673.JPG'),
+    url('/src/assets/images/background/IMG_1098.JPG'),
+    url('/src/assets/images/background/IMG_0358.JPG'),
+    url('/src/assets/images/background/IMG_0536.JPG'),
+    url('/src/assets/images/background/IMG_0423.JPG'),
+    url('/src/assets/images/background/IMG_0384.JPG'),
+    url('/src/assets/images/background/IMG_0591.JPG'),
+    url('/src/assets/images/background/IMG_0747.JPG'),
+    /* Repeat first few for seamless loop */
+    url('/src/assets/images/background/IMG_0542.JPG'),
+    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0243.JPG'),
+    url('/src/assets/images/background/IMG_0725.JPG');
   background-position: 
-    /* Row 1 - slides right */
+    /* Row 1 - slides right (17 images + 4 repeats) */
     0px 2vh, 320px 2vh, 640px 2vh, 960px 2vh, 1280px 2vh, 1600px 2vh, 
     1920px 2vh, 2240px 2vh, 2560px 2vh, 2880px 2vh, 3200px 2vh, 3520px 2vh,
-    /* Row 3 - slides right */
-    0px 34vh, 320px 34vh, 640px 34vh, 960px 34vh, 1280px 34vh, 1600px 34vh,
-    1920px 34vh, 2240px 34vh, 2560px 34vh, 2880px 34vh, 3200px 34vh, 3520px 34vh,
-    /* Row 5 - slides right */
-    0px 66vh, 320px 66vh, 640px 66vh, 960px 66vh, 1280px 66vh, 1600px 66vh,
-    1920px 66vh, 2240px 66vh, 2560px 66vh, 2880px 66vh, 3200px 66vh, 3520px 66vh;
+    3840px 2vh, 4160px 2vh, 4480px 2vh, 4800px 2vh, 5120px 2vh,
+    /* Repeat positions for seamless loop */
+    5440px 2vh, 5760px 2vh, 6080px 2vh, 6400px 2vh,
+    /* Row 3 - slides right (17 images + 4 repeats) */
+    0px 40vh, 320px 40vh, 640px 40vh, 960px 40vh, 1280px 40vh, 1600px 40vh,
+    1920px 40vh, 2240px 40vh, 2560px 40vh, 2880px 40vh, 3200px 40vh, 3520px 40vh,
+    3840px 40vh, 4160px 40vh, 4480px 40vh, 4800vh 40vh, 5120px 40vh,
+    /* Repeat positions for seamless loop */
+    5440px 40vh, 5760px 40vh, 6080px 40vh, 6400px 40vh,
+    /* Row 5 - slides right (17 images + 4 repeats) */
+    0px 78vh, 320px 78vh, 640px 78vh, 960px 78vh, 1280px 78vh, 1600px 78vh,
+    1920px 78vh, 2240px 78vh, 2560px 78vh, 2880px 78vh, 3200px 78vh, 3520px 78vh,
+    3840px 78vh, 4160px 78vh, 4480px 78vh, 4800px 78vh, 5120px 78vh,
+    /* Repeat positions for seamless loop */
+    5440px 78vh, 5760px 78vh, 6080px 78vh, 6400px 78vh;
   background-size: 
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh;
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh;
   background-repeat: no-repeat;
   opacity: 0.3;
   filter: grayscale(30%) contrast(1.1);
   z-index: 1;
-  animation: slideRightInfinite 30s linear infinite;
+  animation: slideRightInfinite 60s linear infinite;
 }
 
 /* Second layer - Rows sliding left (2, 4) */
@@ -94,68 +136,97 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%; /* Increased width for seamless infinite loop */
+  width: 700%; /* Adjusted for 17 images */
   height: 100%;
   background-image: 
-    /* Row 2 - slides left */
-    url('/src/assets/images/background/IMG_0392.JPG'),
-    url('/src/assets/images/background/IMG_0423.JPG'),
+    /* Row 2 - slides left (17 images randomized) */
     url('/src/assets/images/background/IMG_0976.JPG'),
-    url('/src/assets/images/background/IMG_1098.JPG'),
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0591.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
+    url('/src/assets/images/background/IMG_0747.JPG'),
+    url('/src/assets/images/background/IMG_0758.JPG'),
+    url('/src/assets/images/background/IMG_0243.JPG'),
+    url('/src/assets/images/background/IMG_0673.JPG'),
+    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0536.JPG'),
+    url('/src/assets/images/background/IMG_0725.JPG'),
+    url('/src/assets/images/background/IMG_0229.JPG'),
+    url('/src/assets/images/background/IMG_0597.JPG'),
+    url('/src/assets/images/background/IMG_0384.JPG'),
+    url('/src/assets/images/background/IMG_0542.JPG'),
+    url('/src/assets/images/background/IMG_0776.JPG'),
+    url('/src/assets/images/background/IMG_1098.JPG'),
+    url('/src/assets/images/background/IMG_0358.JPG'),
+    /* Repeat first few for seamless loop */
     url('/src/assets/images/background/IMG_0976.JPG'),
-    url('/src/assets/images/background/IMG_1098.JPG'),
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    /* Row 4 - slides left */
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
-    url('/src/assets/images/background/IMG_0358.JPG'),
-    url('/src/assets/images/background/IMG_0392.JPG'),
+    url('/src/assets/images/background/IMG_0591.JPG'),
     url('/src/assets/images/background/IMG_0423.JPG'),
-    url('/src/assets/images/background/IMG_0229.JPG'),
-    url('/src/assets/images/background/IMG_0243.JPG'),
-    url('/src/assets/images/background/IMG_0310.JPG'),
+    url('/src/assets/images/background/IMG_0747.JPG'),
+    /* Row 4 - slides left (different randomized order of 17 images) */
+    url('/src/assets/images/background/IMG_1098.JPG'),
+    url('/src/assets/images/background/IMG_0758.JPG'),
     url('/src/assets/images/background/IMG_0358.JPG'),
+    url('/src/assets/images/background/IMG_0536.JPG'),
+    url('/src/assets/images/background/IMG_0423.JPG'),
+    url('/src/assets/images/background/IMG_0673.JPG'),
+    url('/src/assets/images/background/IMG_0976.JPG'),
+    url('/src/assets/images/background/IMG_0384.JPG'),
+    url('/src/assets/images/background/IMG_0747.JPG'),
+    url('/src/assets/images/background/IMG_0229.JPG'),
+    url('/src/assets/images/background/IMG_0725.JPG'),
+    url('/src/assets/images/background/IMG_0243.JPG'),
+    url('/src/assets/images/background/IMG_0542.JPG'),
+    url('/src/assets/images/background/IMG_0591.JPG'),
+    url('/src/assets/images/background/IMG_0776.JPG'),
     url('/src/assets/images/background/IMG_0392.JPG'),
-    url('/src/assets/images/background/IMG_0423.JPG');
+    url('/src/assets/images/background/IMG_0597.JPG'),
+    /* Repeat first few for seamless loop */
+    url('/src/assets/images/background/IMG_1098.JPG'),
+    url('/src/assets/images/background/IMG_0758.JPG'),
+    url('/src/assets/images/background/IMG_0358.JPG'),
+    url('/src/assets/images/background/IMG_0536.JPG');
   background-position: 
-    /* Row 2 - slides left (starts from right side) */
-    3520px 18vh, 3200px 18vh, 2880px 18vh, 2560px 18vh, 2240px 18vh, 1920px 18vh,
-    1600px 18vh, 1280px 18vh, 960px 18vh, 640px 18vh, 320px 18vh, 0px 18vh,
-    /* Row 4 - slides left (starts from right side) */
-    3520px 50vh, 3200px 50vh, 2880px 50vh, 2560px 50vh, 2240px 50vh, 1920px 50vh,
-    1600px 50vh, 1280px 50vh, 960px 50vh, 640px 50vh, 320px 50vh, 0px 50vh;
+    /* Row 2 - slides left (17 images + 4 repeats, starts from right) */
+    6400px 21vh, 6080px 21vh, 5760px 21vh, 5440px 21vh, 5120px 21vh, 4800px 21vh,
+    4480px 21vh, 4160px 21vh, 3840px 21vh, 3520px 21vh, 3200px 21vh, 2880px 21vh,
+    2560px 21vh, 2240px 21vh, 1920px 21vh, 1600px 21vh, 1280px 21vh,
+    /* Repeat positions for seamless loop */
+    960px 21vh, 640px 21vh, 320px 21vh, 0px 21vh,
+    /* Row 4 - slides left (17 images + 4 repeats, starts from right) */
+    6400px 59vh, 6080px 59vh, 5760px 59vh, 5440px 59vh, 5120px 59vh, 4800px 59vh,
+    4480px 59vh, 4160px 59vh, 3840px 59vh, 3520px 59vh, 3200px 59vh, 2880px 59vh,
+    2560px 59vh, 2240px 59vh, 1920px 59vh, 1600px 59vh, 1280px 59vh,
+    /* Repeat positions for seamless loop */
+    960px 59vh, 640px 59vh, 320px 59vh, 0px 59vh;
   background-size: 
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh,
-    auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh, auto 16vh;
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh,
+    auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh, auto 17vh;
   background-repeat: no-repeat;
   opacity: 0.3;
   filter: grayscale(30%) contrast(1.1);
   z-index: 2;
-  animation: slideLeftInfinite 30s linear infinite;
+  animation: slideLeftInfinite 60s linear infinite;
 }
 
-/* Animation for rows sliding right (1, 3, 5) */
+/* Animation for rows sliding right (1, 3, 5) - Fixed for 17 images */
 @keyframes slideRightInfinite {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1920px); /* Move one full cycle */
+    transform: translateX(-5440px); /* 17 images × 320px = 5440px */
   }
 }
 
-/* Animation for rows sliding left (2, 4) */
+/* Animation for rows sliding left (2, 4) - Fixed for 17 images */
 @keyframes slideLeftInfinite {
   0% {
-    transform: translateX(-1920px); /* Start offset */
+    transform: translateX(-5440px); /* Start offset by 17 images */
   }
   100% {
     transform: translateX(0); /* Move to origin */
