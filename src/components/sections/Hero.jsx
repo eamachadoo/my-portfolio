@@ -12,14 +12,11 @@ const Hero = () => {
             <span>📍 PORTO, PORTUGAL</span>
           </div>
           <div className="social-icons">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/eamachadoo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/eduardo-machado-78020a2a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
             </a>
           </div>
           <button className="connect-btn">LET'S CONNECT</button>
