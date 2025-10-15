@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare-images": "node scripts/optimize-images.js",
+    "update-css": "node scripts/update-css.js",
+    "optimize-images": "npm run prepare-images",
+    "optimize-all": "node scripts/optimize-all.js"
   },
   "dependencies": {
     "react": "^18.2.0",
