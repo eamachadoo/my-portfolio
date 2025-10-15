@@ -1,14 +1,13 @@
-import React from 'react';
 import './Hero.css';
 import profileImage from '../../assets/images/foto_perfil.jpg';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1>Welcome to my Portfolio!</h1>
-          <h2>Hi, I'm Eduardo and here is some of my work as Software Developper</h2>
+          <h1 className="hero-name">eduardo</h1>
+          <h2 className="hero-subtitle">Developer portfolio</h2>
           <div className="location">
             <span>📍 PORTO, PORTUGAL</span>
           </div>
