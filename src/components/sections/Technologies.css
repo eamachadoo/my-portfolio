@@ -81,7 +81,6 @@
 
 /* Add hover effect to title */
 .section-title:hover {
-  transform: scale(1.02);
   transition: transform 0.3s ease;
 }
 
@@ -410,19 +409,6 @@
     font-size: 3rem;
     margin-bottom: 3rem;
     padding-top: 1rem;
-  }
-  
-  .section-title::before,
-  .section-title::after {
-    width: 40px;
-  }
-  
-  .section-title::before {
-    left: -60px;
-  }
-  
-  .section-title::after {
-    right: -60px;
   }
   
   .technologies {
