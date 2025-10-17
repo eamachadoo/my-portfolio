@@ -118,9 +118,6 @@ const Technologies = () => {
     <section id="technologies" className="technologies">
       <div className="container">
         <h2 className="section-title">Technologies I Work With</h2>
-        <p className="section-subtitle">
-          Here are the programming languages, frameworks, and tools I've learned and use in my projects
-        </p>
         
         <div className="technologies-container">
           <button 
