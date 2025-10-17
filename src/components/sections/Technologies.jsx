@@ -4,8 +4,11 @@ import './Technologies.css';
 
 const Technologies = () => {
   const scrollRef = useRef(null);
+  const sectionRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
 
   const technologies = [
     {
@@ -70,6 +73,45 @@ const Technologies = () => {
     }
   ];
 
+  // Intersection Observer for entrance/exit animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Entering the section
+            setIsVisible(true);
+            setIsExiting(false);
+          } else {
+            // Leaving the section
+            if (isVisible) {
+              setIsExiting(true);
+              // Reset after exit animation completes
+              setTimeout(() => {
+                setIsVisible(false);
+                setIsExiting(false);
+              }, 800);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+        rootMargin: '-10% 0px -10% 0px' // Add some margin for better triggering
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [isVisible]);
+
   const checkScrollButtons = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -83,7 +125,7 @@ const Technologies = () => {
 
   const scrollLeft = () => {
     if (scrollRef.current && canScrollLeft) {
-      const cardWidth = 120 + 24; // card width + gap
+      const cardWidth = 200 + 48; // updated card width + gap
       const scrollAmount = Math.min(cardWidth * 3, scrollRef.current.scrollLeft);
       scrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
@@ -91,7 +133,7 @@ const Technologies = () => {
 
   const scrollRight = () => {
     if (scrollRef.current && canScrollRight) {
-      const cardWidth = 120 + 24; // card width + gap
+      const cardWidth = 200 + 48; // updated card width + gap
       const scrollAmount = cardWidth * 3;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
@@ -115,13 +157,13 @@ const Technologies = () => {
   }, []);
 
   return (
-    <section id="technologies" className="technologies">
+    <section id="technologies" className="technologies" ref={sectionRef}>
       <div className="container">
-        <h2 className="section-title">Technologies I Work With</h2>
+        <h2 className="section-title">Tech Stack</h2>
         
-        <div className="technologies-container">
+        <div className={`technologies-container ${isExiting ? 'exiting' : ''}`}>
           <button 
-            className={`scroll-indicator scroll-left ${!canScrollLeft ? 'disabled' : ''}`}
+            className={`scroll-indicator scroll-left ${!canScrollLeft ? 'disabled' : ''} ${isExiting ? 'exiting' : ''}`}
             onClick={scrollLeft}
             disabled={!canScrollLeft}
             aria-label="Scroll left"
@@ -132,12 +174,16 @@ const Technologies = () => {
           
           <div className="technologies-grid" ref={scrollRef}>
             {technologies.map((tech, index) => (
-              <TechnologyCard key={index} technology={tech} />
+              <TechnologyCard 
+                key={index} 
+                technology={tech} 
+                className={isExiting ? 'exiting' : ''}
+              />
             ))}
           </div>
           
           <button 
-            className={`scroll-indicator scroll-right ${!canScrollRight ? 'disabled' : ''}`}
+            className={`scroll-indicator scroll-right ${!canScrollRight ? 'disabled' : ''} ${isExiting ? 'exiting' : ''}`}
             onClick={scrollRight}
             disabled={!canScrollRight}
             aria-label="Scroll right"
@@ -151,4 +197,4 @@ const Technologies = () => {
   );
 };
 
-export default Technologies; 
+export default Technologies;
